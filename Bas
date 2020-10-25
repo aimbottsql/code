@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume Bas</title>
+</head>
+<body>
+
+<h1>About Bas</h1>
+<p>My name is Sarun Panthong</p>
+<p>Nisit ID:6221654912</p>
+<p>Major:Lieral Art and Science</p>
+<p>Faculty:Infomation Technology</p>
+<p>Email:Contact:Saran.pant@ku.th</p>
+<p>Contact:0971281214</p>
+</body>
+</html>
