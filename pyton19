@@ -1,0 +1,23 @@
+from python19_GPA_form import Ui_MainWindow
+from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
+from python19_GPA_model import connect_database
+
+
+class mywindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(mywindow, self).__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.ui.pushButton.clicked.connect(self.onClick)
+
+
+    def onClick(self):
+        self.ui.pushButton.text()
+        print(connect_database())
+
+
+app = QtWidgets.QApplication([])
+application = mywindow()
+application.show()
+sys.exit(app.exec())
