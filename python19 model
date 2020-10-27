@@ -1,0 +1,26 @@
+
+import pymysql
+def connect_database() :
+    try:
+        connection = pymysql.connect(host="localhost", user="root",passwd="",database="ku_db")
+        cur = connection.cursor()
+        cur.execute("SELECT * FROM `semester_grades`")
+        data = cur.fetchall()
+        grade_point_average = 0.00
+        total_credit = 21
+
+        for row in data:
+            Subjects = row[0]
+            Credit = row[1]
+            Grades = row[2]
+            Gradevalue = row[3]
+            grade_point_average =  grade_point_average + (Gradevalue * Credit)/total_credit
+
+        print("ผลการเรียนเฉลี่ย %.2f"%( grade_point_average))
+
+        connection.close()
+
+    except pymysql.Error:
+        print('การเชื่อมต่อฐานข้อมูลผิดพลาด')
+    except IndexError:
+        print('การระบุตำแหน่งผิดพลาด')
